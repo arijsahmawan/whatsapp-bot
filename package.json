@@ -1,0 +1,19 @@
+{
+  "name": "new-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "idun",
+  "license": "ISC",
+  "dependencies": {
+    "@bochilteam/scraper": "^4.2.4",
+    "@mengkodingan/ckptw": "^4.0.5",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "api-dylux": "^1.7.2"
+  }
+}
