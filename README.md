@@ -1,6 +1,7 @@
 # whatsapp-bot
 
 ## Installation
+
 1. **Clone repository**
 ```bash
 git clone https://github.com/arijsahmawan/whatsapp-bot .git
@@ -10,7 +11,7 @@ cd whatsapp-bot
 ```bash
 npm install
 ```
-3. Running bot
+3. **Running bot**
 ```bash
 node index.js
 ```
