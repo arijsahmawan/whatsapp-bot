@@ -11,7 +11,10 @@
   "dependencies": {
     "@bochilteam/scraper": "^4.2.4",
     "@mengkodingan/ckptw": "^4.0.5",
-    "path": "^0.12.7"
+    "jimp": "^0.16.13",
+    "moment-timezone": "^0.5.45",
+    "path": "^0.12.7",
+    "wa-sticker-formatter": "^4.4.4"
   },
   "devDependencies": {
     "api-dylux": "^1.7.2"

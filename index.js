@@ -22,12 +22,13 @@ bot.ev.once(Events.ClientReady, (msg) => {
 bot.ev.on(Events.MessagesUpsert, async (msg, ctx) => {
     try{
         if(msg.key.fromMe) return;
-
+        
         if(ctx._used.commands && ctx._used.prefix) {
+            console.log(ctx)
             ctx.simulateTyping()
         }
 
-        if(ctx._sender.jid.includes(global.owner.number)){
+        if(ctx._sender.jid.includes(global.owner.number) || ctx._sender.jid.includes(global.ketos.number)){
             if(msg.content.startsWith('> ')){
                 const code = msg.content.slice(2)
                 const result = await eval(code)

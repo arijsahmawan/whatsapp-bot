@@ -3,7 +3,12 @@ global.owner = {
     number: "6285793613286"
 }
 
+global.ketos = {
+	name: 'Gilang',
+	number: '628987342069',
+}
+
 global.sticker = {
-    packname: '',
-    author: ''
+    packname: 'Bot-OSIS',
+    author: 'Flandre'
 }

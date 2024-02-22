@@ -1,28 +1,23 @@
 const sekarang = new Date()
 const { bold } = require("@mengkodingan/ckptw");
 const fs = require('fs')
+const moment = require("moment-timezone")
 
-const hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
-const nHari = hari[sekarang.getDay()]
-const tanggal = sekarang.getDate()
-const bulan = sekarang.getMonth()+1
-const tahun = sekarang.getFullYear()
-const jam = sekarang.getHours()
-const menit = sekarang.getMinutes()
+const timeZone = {timezone: 'Asia/Jakarta'}
+moment.tz.setDefault('Asia/Jakarta').locale('id')
 
-function time(jam){
-    if(jam >= 5 && jam < 12) return 'pagi'
-    else if(jam >= 12 && jam < 17) return 'siang'
-    else if(jam >= 17 && jam < 20) return 'sore'
-    else if(jam >= 20) return 'malam'
-}
+const nHari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+let hari = nHari[sekarang.getDay().toLocaleString('en-US', timeZone)]
+let tanggal = moment.tz('Asia/Jakarta').format('DD-MM-YYYY')
+const dt = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
+let jam = moment.tz('Asia/Jakarta').format('HH:mm')
 
 function formatType(type) {
     return type.replace(/_/g, ' ')
         .replace(/\b\w/g, (match) => match.toUpperCase());
 }
 
-const info = `\n*Hari, Tanggal* : ${nHari}, ${tanggal}-${bulan}-${tahun} \n*Waktu* : ${jam}.${menit}\n*Prefix* : .\n\n`
+const info = `\n*Hari, Tanggal* : ${hari}, ${tanggal} \n*Waktu* : ${jam}\n*Prefix* : .\n\n`
 
 module.exports = {
     name: 'menu',
@@ -63,7 +58,7 @@ module.exports = {
             image: {
                 url: urlImg
             },
-            caption: `*[BOT OSIS SMK WIn-G]*\n\nSelamat ${time(jam)} @${id.split('@')[0]}. Berikut adalah daftar perintah yang tersedia!\n` + info + text,
+            caption: `*[BOT OSIS SMK WIn-G]*\n\nSelamat ${dt} @${id.split('@')[0]}. Berikut adalah daftar perintah yang tersedia!\n` + info + text,
             mentions: [id]
         })
     },
