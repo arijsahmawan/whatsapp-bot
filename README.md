@@ -1,4 +1,5 @@
 # whatsapp-bot
+Bot created on the basis of orders from the chairman of the SMK Wira Informatics Global student council.
 
 ## Installation
 
