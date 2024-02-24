@@ -17,7 +17,7 @@ function formatType(type) {
         .replace(/\b\w/g, (match) => match.toUpperCase());
 }
 
-const info = `\n*Hari, Tanggal* : ${hari}, ${tanggal} \n*Waktu* : ${jam}\n*Prefix* : .\n\n`
+const info = `\n*Hari* : ${hari}\n*Tanggal* : ${tanggal} \n*Waktu* : ${jam}\n\n`
 
 module.exports = {
     name: 'menu',
