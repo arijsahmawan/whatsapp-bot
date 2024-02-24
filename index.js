@@ -24,7 +24,6 @@ bot.ev.on(Events.MessagesUpsert, async (msg, ctx) => {
         if(msg.key.fromMe) return;
         
         if(ctx._used.commands && ctx._used.prefix) {
-            console.log(ctx)
             ctx.simulateTyping()
         }
 
