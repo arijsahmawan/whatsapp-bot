@@ -28,7 +28,6 @@ bot.ev.on(Events.MessagesUpsert, async (msg, ctx) => {
         }
 
         if(ctx._sender.jid.includes(global.owner.number) || ctx._sender.jid.includes(global.ketos.number)){
-            ctx.simulateTyping()
             if(msg.content.startsWith('> ')){
                 const code = msg.content.slice(2)
                 const result = await eval(code)
